@@ -1,0 +1,15 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:3000", // 因为web-dev-derver默认打开的是此端口， 所以用url来指定调试该端口， 具体的端口和路径由你项目决定 
+            "webRoot": "${workspaceFolder}" // 默认
+        }
+    ]
+}

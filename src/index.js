@@ -95,6 +95,7 @@ class Main {
             const menuItemHtml = document.createElement("span");
             menuItemHtml.classList.add("menu-item");
             menuItemHtml.innerText = menuItem.MenuItem;
+            
             const menuItemContainerHtml = document.createElement("ul");
             menuItemContainerHtml.classList.add("menu-list-container");
 
@@ -106,10 +107,24 @@ class Main {
             }
 
             menuItemHtml.appendChild(menuItemContainerHtml);
+            menuItemHtml.addEventListener("click", () => {
+                me.menuSwitch(menuItemContainerHtml);
+            });
             menuElement.appendChild(menuItemHtml);
         }
 
         return menuElement;
+    }
+
+    menuSwitch(element, active) {
+        const me = this;
+        const status = element.classList.contains("active");
+
+        if (status) {
+            element.classList.remove("active");
+        } else {
+            element.classList.add("active");
+        }
     }
 }
 
