@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
@@ -25,12 +25,12 @@ module.exports = {
         ]
     },
     mode: 'none',
-    devtool: 'inline-source-map',
+    // devtool: 'inline-source-map',
     devServer: {
         contentBase: './dist'
     },
     plugins: [
-        new CleanWebpackPlugin(),
+        // new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: 'Notepad'
         }),

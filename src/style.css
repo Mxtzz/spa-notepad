@@ -16,6 +16,21 @@ li {
     list-style: none;
 }
 
+.mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* z-index: 9; */
+    z-index: -1;
+    opacity: 0;
+}
+
+.mask-active {
+    z-index: 9;
+}
+
 .text {
     height: 600px;
     width: 660px;
@@ -72,11 +87,17 @@ li {
     padding: 3px 5px;
     border: 1px solid rgb(255, 255, 255);
     position: relative;
+    z-index: 10;
 }
 
 .menu-item:hover {
     background: rgb(229, 243, 255);
     border: 1px solid rgb(204, 232, 255);
+}
+
+.menu-item-active {
+    background: rgb(81, 169, 247)!important;
+    border: 1px solid rgb(204, 232, 255)!important;
 }
 
 .menu-list-container {
@@ -91,15 +112,19 @@ li {
 
     opacity: 0;
     z-index: -1;
+    display: none;
 }
 
-.menu-list-container .active {
+.menu-list-active {
     opacity: 1!important;
     z-index: 10!important;
+    display: block!important;
 }
 
 .menu-list-item {
-    padding: 2px 22px;
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 10px 2px 20px;
 }
 
 .menu-list-item:hover{

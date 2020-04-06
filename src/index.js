@@ -8,54 +8,54 @@ class Main {
                 ID: 1,
                 MenuItem: "文件(F)",
                 List: [
-                    { Name: "新建(N)" },
-                    { Name: "新窗口(W)" },
-                    { Name: "打开(O)..." },
-                    { Name: "保存(S)" },
-                    { Name: "另存为(A)..." },
-                    { Name: "页面设置(U)..." },
-                    { Name: "打印(P)..." },
-                    { Name: "退出(X)" }
+                    { Name: "新建(N)", Shortcut: "Ctrl+N" },
+                    { Name: "新窗口(W)", Shortcut: "Ctrl+Shift+N" },
+                    { Name: "打开(O)...", Shortcut: "Ctrl+N" },
+                    { Name: "保存(S)", Shortcut: "Ctrl+N" },
+                    { Name: "另存为(A)...", Shortcut: "Ctrl+N" },
+                    { Name: "页面设置(U)...", Shortcut: "Ctrl+N" },
+                    { Name: "打印(P)...", Shortcut: "Ctrl+N" },
+                    { Name: "退出(X)", Shortcut: "Ctrl+N" }
                 ]
             }, {
                 ID: 2,
                 MenuItem: "编辑(E)",
                 List: [
-                    { Name: "撤销" },
-                    { Name: "剪切(W)" },
-                    { Name: "复制(O)" },
-                    { Name: "粘贴(S)" },
-                    { Name: "删除(A)" },
-                    { Name: "使用Bing搜索(U)..." },
-                    { Name: "查找(P)..." },
-                    { Name: "查找下一个(X)" },
-                    { Name: "查找上一个(X)" },
-                    { Name: "替换()" },
-                    { Name: "转到()" },
-                    { Name: "全选()" },
-                    { Name: "时间/日期(D)" },
+                    { Name: "撤销", Shortcut: "Ctrl+N" },
+                    { Name: "剪切(W)", Shortcut: "Ctrl+N" },
+                    { Name: "复制(O)", Shortcut: "Ctrl+N" },
+                    { Name: "粘贴(S)", Shortcut: "Ctrl+N" },
+                    { Name: "删除(A)", Shortcut: "Ctrl+N" },
+                    { Name: "使用Bing搜索(U)...", Shortcut: "Ctrl+N" },
+                    { Name: "查找(P)...", Shortcut: "Ctrl+N" },
+                    { Name: "查找下一个(X)", Shortcut: "Ctrl+N" },
+                    { Name: "查找上一个(X)", Shortcut: "Ctrl+N" },
+                    { Name: "替换()", Shortcut: "Ctrl+N" },
+                    { Name: "转到()", Shortcut: "Ctrl+N" },
+                    { Name: "全选()", Shortcut: "Ctrl+N" },
+                    { Name: "时间/日期(D)", Shortcut: "Ctrl+N" },
                 ]
             }, {
                 ID: 3,
                 MenuItem: "格式(O)",
                 List: [
-                    { Name: "自动换行()" },
-                    { Name: "字体()" }
+                    { Name: "自动换行()", Shortcut: "Ctrl+N" },
+                    { Name: "字体()", Shortcut: "Ctrl+N" }
                 ]
             }, {
                 ID: 4,
                 MenuItem: "查看(V)",
                 List: [
-                    { Name: "缩放(N)" },
-                    { Name: "状态栏()" }
+                    { Name: "缩放(N)", Shortcut: "Ctrl+N" },
+                    { Name: "状态栏()", Shortcut: "Ctrl+N" }
                 ]
             }, {
                 ID: 5,
                 MenuItem: "帮助(H)",
                 List: [
-                    { Name: "查看帮助()" },
-                    { Name: "发送反馈()" },
-                    { Name: "关于记事本()" }
+                    { Name: "查看帮助()", Shortcut: "Ctrl+N" },
+                    { Name: "发送反馈()", Shortcut: "Ctrl+N" },
+                    { Name: "关于记事本()", Shortcut: "Ctrl+N" }
                 ]
             }
         ]
@@ -63,6 +63,10 @@ class Main {
 
     initPage() {
         const me = this;
+        const maskElement = document.createElement("div");
+        maskElement.classList.add("mask");
+        document.body.appendChild(maskElement);
+
         const element = document.createElement('div');
         element.classList.add("text");
         element.innerHTML = `
@@ -82,6 +86,7 @@ class Main {
 
         element.querySelector(".header").appendChild(me.renderHeader(me.headerData));
 
+        me.maskEvent();
         return element;
     }
 
@@ -94,6 +99,7 @@ class Main {
             const menuItem = data[i];
             const menuItemHtml = document.createElement("span");
             menuItemHtml.classList.add("menu-item");
+            menuItemHtml.id = "MenuItem" + i;
             menuItemHtml.innerText = menuItem.MenuItem;
             
             const menuItemContainerHtml = document.createElement("ul");
@@ -102,14 +108,18 @@ class Main {
             for (let j = 0; j < menuItem.List.length; j ++) {
                 const childListItem = menuItem.List[j];
                 const tmpLi = document.createElement("li");
-                tmpLi.innerHTML = childListItem.Name;
+                tmpLi.classList.add("menu-list-item");
+                tmpLi.innerHTML = `<span>${childListItem.Name}</span><span>${childListItem.Shortcut}</span>`;
                 menuItemContainerHtml.appendChild(tmpLi);
             }
 
             menuItemHtml.appendChild(menuItemContainerHtml);
-            menuItemHtml.addEventListener("click", () => {
-                me.menuSwitch(menuItemContainerHtml);
-            });
+            menuItemHtml.addEventListener("click", (e) => {
+                if (e.target.id.startsWith("MenuItem")) {
+                    me.menuSwitch(menuItemContainerHtml);
+                }
+                e.stopPropagation();
+            }, true);
             menuElement.appendChild(menuItemHtml);
         }
 
@@ -118,13 +128,29 @@ class Main {
 
     menuSwitch(element, active) {
         const me = this;
-        const status = element.classList.contains("active");
-
-        if (status) {
-            element.classList.remove("active");
-        } else {
-            element.classList.add("active");
+        const tmpElements = document.querySelectorAll(".menu-list-active");
+        if (tmpElements && tmpElements.length > 0) {
+            tmpElements.forEach((item) => {
+                item.classList.remove("menu-list-active");
+                item.parentNode.classList.remove("menu-item-active");
+            });
         }
+        
+        if (element) {
+            element.classList.add("menu-list-active");
+            element.parentNode.classList.add("menu-item-active");
+            document.querySelector(".mask").classList.add("mask-active");
+        }
+    }
+
+    maskEvent() {
+        const me = this;
+
+        const maskElement = document.querySelector(".mask");
+        maskElement.addEventListener("click", () => {
+            me.menuSwitch();
+            maskElement.classList.remove("mask-active");
+        });
     }
 }
 
