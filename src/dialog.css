@@ -1,0 +1,78 @@
+.dialog-bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 12px;
+    z-index: 12;
+}
+
+.dialog {
+    border: 1px solid;
+    width: 450px;
+    height: 500px;
+    background: #fff;
+    margin: 80px 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dialog-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dialog-title {
+    padding: 6px;
+}
+
+.line-1 {
+    display: flex;
+}
+
+.ziti {
+
+}
+
+.ziti-title {
+
+}
+
+.ziti-input {
+
+}
+
+.dialog-list {
+    border: 1px solid rgb(130, 135, 144);
+    overflow-y: scroll;
+    background: #fff;
+}
+
+.ziti-list {
+    
+}
+
+.dialog-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    font-size: 20px;
+    transition: all 100ms ease-in-out;
+}
+
+.dialog-close:hover {
+    background: rgb(232, 17, 35);
+    color: rgb(240, 240, 240);
+}
+
+.dialog-container {
+    background: rgb(240,240,240);
+    flex: 1;
+}
+
+.line-4 {
+    display: flex;
+    justify-content: flex-end;
+}

@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "0445733652a1c36b4550";
+/******/ 	var hotCurrentHash = "ce1640b8f0d253c0a66b";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -802,7 +802,7 @@
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "* {\r\n    padding: 0;\r\n    margin: 0;\r\n    user-select:none;\r\n}\r\n\r\nbody {\r\n    background: #333;\r\n}\r\n\r\nul {\r\n    \r\n}\r\n\r\nli {\r\n    list-style: none;\r\n}\r\n\r\n.text {\r\n    height: 600px;\r\n    width: 660px;\r\n    margin: 20px;\r\n    border: 1px solid #666;\r\n    position: relative;\r\n    font-size: 12px;\r\n    background: #fff;\r\n}\r\n\r\n.header {\r\n    border-bottom: 1.5px solid rgb(240, 240, 240);\r\n}\r\n\r\n.title {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    flex: 1;\r\n}\r\n\r\n.title-left {\r\n    font-size: 12px;\r\n    padding: 6px;\r\n}\r\n\r\n.title-right {\r\n    display: flex;\r\n    font-size: 20px;\r\n}\r\n\r\n.title-right span{\r\n    height: 28px;\r\n    width: 50px;\r\n    align-items: center;\r\n    display: flex;\r\n    justify-content: center;\r\n    transition: background-color 200ms ease-in-out;\r\n}\r\n\r\n.title-right span:hover {\r\n    background: rgb(229, 229, 229);\r\n}\r\n\r\n.title-right .close:hover {\r\n    background: rgb(232, 17, 35);\r\n    color: rgb(240, 240, 240);\r\n}\r\n\r\n.menu {\r\n    display: flex;\r\n}\r\n\r\n.menu-item{\r\n    padding: 3px 5px;\r\n    border: 1px solid rgb(255, 255, 255);\r\n    position: relative;\r\n}\r\n\r\n.menu-item:hover {\r\n    background: rgb(229, 243, 255);\r\n    border: 1px solid rgb(204, 232, 255);\r\n}\r\n\r\n.menu-item-active {\r\n    background: rgb(81, 169, 247)!important;\r\n    border: 1px solid rgb(204, 232, 255)!important;\r\n}\r\n\r\n.menu-list-container {\r\n    position: absolute;\r\n    background: rgb(242, 242, 242);\r\n    width: 200px;\r\n    padding: 2px;\r\n    border: 1px solid #eee;\r\n    box-shadow: 2px 2px 3px #aaa;\r\n    top: 23px;\r\n    left: 0;\r\n\r\n    opacity: 0;\r\n    z-index: -1;\r\n}\r\n\r\n.menu-list-active {\r\n    opacity: 1!important;\r\n    z-index: 10!important;\r\n}\r\n\r\n.menu-list-item {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    padding: 2px 10px 2px 20px;\r\n}\r\n\r\n.menu-list-item:hover{\r\n    background: rgb(145,201,247);\r\n}\r\n\r\n.container {\r\n\r\n}\r\n\r\n.footer {\r\n    position: absolute;\r\n    left: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n    height: 24px;\r\n    background: rgb(240, 240, 240);\r\n}\r\n", ""]);
+exports.push([module.i, "* {\r\n    padding: 0;\r\n    margin: 0;\r\n    user-select:none;\r\n}\r\n\r\nbody {\r\n    background: #333;\r\n}\r\n\r\nul {\r\n    \r\n}\r\n\r\nli {\r\n    list-style: none;\r\n}\r\n\r\n.mask {\r\n    position: fixed;\r\n    top: 0;\r\n    bottom: 0;\r\n    left: 0;\r\n    right: 0;\r\n    /* z-index: 9; */\r\n    z-index: -1;\r\n    opacity: 0;\r\n}\r\n\r\n.mask-active {\r\n    z-index: 9;\r\n}\r\n\r\n.text {\r\n    height: 600px;\r\n    width: 660px;\r\n    margin: 20px;\r\n    border: 1px solid #666;\r\n    position: relative;\r\n    font-size: 12px;\r\n    background: #fff;\r\n}\r\n\r\n.header {\r\n    border-bottom: 1.5px solid rgb(240, 240, 240);\r\n}\r\n\r\n.title {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    flex: 1;\r\n}\r\n\r\n.title-left {\r\n    font-size: 12px;\r\n    padding: 6px;\r\n}\r\n\r\n.title-right {\r\n    display: flex;\r\n    font-size: 20px;\r\n}\r\n\r\n.title-right span{\r\n    height: 28px;\r\n    width: 50px;\r\n    align-items: center;\r\n    display: flex;\r\n    justify-content: center;\r\n    transition: background-color 200ms ease-in-out;\r\n}\r\n\r\n.title-right span:hover {\r\n    background: rgb(229, 229, 229);\r\n}\r\n\r\n.title-right .close:hover {\r\n    background: rgb(232, 17, 35);\r\n    color: rgb(240, 240, 240);\r\n}\r\n\r\n.menu {\r\n    display: flex;\r\n}\r\n\r\n.menu-item{\r\n    padding: 3px 5px;\r\n    border: 1px solid rgb(255, 255, 255);\r\n    position: relative;\r\n    z-index: 10;\r\n}\r\n\r\n.menu-item:hover {\r\n    background: rgb(229, 243, 255);\r\n    border: 1px solid rgb(204, 232, 255);\r\n}\r\n\r\n.menu-item-active {\r\n    background: rgb(81, 169, 247)!important;\r\n    border: 1px solid rgb(204, 232, 255)!important;\r\n}\r\n\r\n.menu-list-container {\r\n    position: absolute;\r\n    background: rgb(242, 242, 242);\r\n    width: 200px;\r\n    padding: 2px;\r\n    border: 1px solid #eee;\r\n    box-shadow: 2px 2px 3px #aaa;\r\n    top: 23px;\r\n    left: 0;\r\n\r\n    opacity: 0;\r\n    z-index: -1;\r\n    display: none;\r\n}\r\n\r\n.menu-list-active {\r\n    opacity: 1!important;\r\n    z-index: 10!important;\r\n    display: block!important;\r\n}\r\n\r\n.menu-list-item {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    padding: 2px 10px 2px 20px;\r\n}\r\n\r\n.menu-list-item:hover{\r\n    background: rgb(145,201,247);\r\n}\r\n\r\n.container {\r\n\r\n}\r\n\r\n.footer {\r\n    position: absolute;\r\n    left: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n    height: 24px;\r\n    background: rgb(240, 240, 240);\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -1247,8 +1247,8 @@ class Main {
                 ID: 3,
                 MenuItem: "格式(O)",
                 List: [
-                    { Name: "自动换行()", Shortcut: "Ctrl+N" },
-                    { Name: "字体()", Shortcut: "Ctrl+N" }
+                    { Name: "自动换行(W)", Shortcut: "" },
+                    { Name: "字体(F)...", Shortcut: "" }
                 ]
             }, {
                 ID: 4,
@@ -1271,6 +1271,10 @@ class Main {
 
     initPage() {
         const me = this;
+        const maskElement = document.createElement("div");
+        maskElement.classList.add("mask");
+        document.body.appendChild(maskElement);
+
         const element = document.createElement('div');
         element.classList.add("text");
         element.innerHTML = `
@@ -1286,11 +1290,11 @@ class Main {
             </div>
             <div class="container"></div>
             <div class="footer"></div>
-            <div class=""></div>
         `;
 
         element.querySelector(".header").appendChild(me.renderHeader(me.headerData));
 
+        me.maskEvent();
         return element;
     }
 
@@ -1340,9 +1344,21 @@ class Main {
             });
         }
         
-        element.classList.add("menu-list-active");
-        element.parentNode.classList.add("menu-item-active");
-        
+        if (element) {
+            element.classList.add("menu-list-active");
+            element.parentNode.classList.add("menu-item-active");
+            document.querySelector(".mask").classList.add("mask-active");
+        }
+    }
+
+    maskEvent() {
+        const me = this;
+
+        const maskElement = document.querySelector(".mask");
+        maskElement.addEventListener("click", () => {
+            me.menuSwitch();
+            maskElement.classList.remove("mask-active");
+        });
     }
 }
 

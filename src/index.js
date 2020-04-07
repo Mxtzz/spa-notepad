@@ -1,5 +1,6 @@
 import dialog from './dialog.js';
 import './style.css';
+import './dialog.css';
 
 class Main {
     constructor() {
@@ -39,8 +40,8 @@ class Main {
                 ID: 3,
                 MenuItem: "格式(O)",
                 List: [
-                    { Name: "自动换行()", Shortcut: "Ctrl+N" },
-                    { Name: "字体()", Shortcut: "Ctrl+N" }
+                    { Name: "自动换行(W)", Shortcut: "" },
+                    { Name: "字体(F)...", Shortcut: "" }
                 ]
             }, {
                 ID: 4,
@@ -63,9 +64,67 @@ class Main {
 
     initPage() {
         const me = this;
+
         const maskElement = document.createElement("div");
         maskElement.classList.add("mask");
         document.body.appendChild(maskElement);
+
+        const dialog = document.createElement("div");
+        dialog.classList.add("dialog-bg");
+        dialog.innerHTML = `
+            <div class="dialog">
+                <div class="dialog-header">
+                    <div class="dialog-title">字体</div>
+                    <div class="dialog-close">×</div>
+                </div>
+                <div class="dialog-container">
+                    <div class="line-1">
+                        <div class="ziti">
+                            <div class="ziti-title">字体(F):</div>
+                            <input type="text" class="ziti-input"/>
+                            <ul class="ziti-list dialog-list">
+                                <li class="">微软雅黑</li>
+                                <li class="">隶书</li>
+                                <li class="">楷体</li>
+                                <li class="">新宋体</li>
+                                <li class="">宋体</li>
+                                <li class="">幼圆</li>
+                                <li class="">华文中宋</li>
+                                <li class="">仿宋</li>
+                                <li class="">等线</li>
+                                <li class="">Cascadia</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div>字形(Y):</div>
+                            <input type="text"/>
+                            <ul class="zixing-list dialog-list">
+                                <li class=""></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div>大小(S):</div>
+                            <input type="text"/>
+                            <ul class="daxiao-list dialog-list">
+                                <li class=""></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line-2">
+                        <div>示例</div>
+                        <div>脚本(R)</div>
+                    </div>
+                    <div class="line-3">
+                        <a>显示更多字体</a>
+                    </div>
+                    <div class="line-4">
+                        <div class="dialog-confirm">确定</div>
+                        <div class="dialog-cancel">取消</div>
+                    </div>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(dialog);
 
         const element = document.createElement('div');
         element.classList.add("text");
@@ -110,6 +169,13 @@ class Main {
                 const tmpLi = document.createElement("li");
                 tmpLi.classList.add("menu-list-item");
                 tmpLi.innerHTML = `<span>${childListItem.Name}</span><span>${childListItem.Shortcut}</span>`;
+
+                if (i == 2 && j == 1) {
+                    tmpLi.addEventListener("click", () => {
+
+                    });
+                }
+        
                 menuItemContainerHtml.appendChild(tmpLi);
             }
 
@@ -151,6 +217,11 @@ class Main {
             me.menuSwitch();
             maskElement.classList.remove("mask-active");
         });
+    }
+
+    dialog() {
+        const me = this;
+        
     }
 }
 
