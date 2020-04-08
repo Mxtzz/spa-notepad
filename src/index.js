@@ -112,7 +112,13 @@ class Main {
 
                 if (i == 2 && j == 1) {
                     tmpLi.addEventListener("click", () => {
-
+                        document.querySelector(".mask").click();
+                        const dialogElement = document.querySelector(".dialog-bg");
+                        if (dialogElement.classList.contains("dialog-active")) {
+                            dialogElement.classList.remove("dialog-active");
+                        } else {
+                            dialogElement.classList.add("dialog-active");
+                        }
                     });
                 }
         
@@ -124,8 +130,7 @@ class Main {
                 if (e.target.id.startsWith("MenuItem")) {
                     me.menuSwitch(menuItemContainerHtml);
                 }
-                e.stopPropagation();
-            }, true);
+            });
             menuElement.appendChild(menuItemHtml);
         }
 
@@ -198,6 +203,18 @@ class Main {
             tmpElement.innerHTML = item.Name;
             scriptElement.appendChild(tmpElement);
         }
+
+        document.querySelector(".dialog-confirm").addEventListener("click", () => {
+            document.querySelector(".dialog-bg").classList.remove("dialog-active");
+        });
+
+        document.querySelector(".dialog-cancel").addEventListener("click", () => {
+            document.querySelector(".dialog-bg").classList.remove("dialog-active");
+        });
+
+        document.querySelector(".dialog-close").addEventListener("click", () => {
+            document.querySelector(".dialog-bg").classList.remove("dialog-active");
+        });
     }
 }
 
