@@ -1,65 +1,11 @@
 import dialog from './dialog.js';
 import './style.css';
 import './dialog.css';
+import * as data from './data';
 
 class Main {
     constructor() {
-        this.headerData = [
-            {
-                ID: 1,
-                MenuItem: "文件(F)",
-                List: [
-                    { Name: "新建(N)", Shortcut: "Ctrl+N" },
-                    { Name: "新窗口(W)", Shortcut: "Ctrl+Shift+N" },
-                    { Name: "打开(O)...", Shortcut: "Ctrl+N" },
-                    { Name: "保存(S)", Shortcut: "Ctrl+N" },
-                    { Name: "另存为(A)...", Shortcut: "Ctrl+N" },
-                    { Name: "页面设置(U)...", Shortcut: "Ctrl+N" },
-                    { Name: "打印(P)...", Shortcut: "Ctrl+N" },
-                    { Name: "退出(X)", Shortcut: "Ctrl+N" }
-                ]
-            }, {
-                ID: 2,
-                MenuItem: "编辑(E)",
-                List: [
-                    { Name: "撤销", Shortcut: "Ctrl+N" },
-                    { Name: "剪切(W)", Shortcut: "Ctrl+N" },
-                    { Name: "复制(O)", Shortcut: "Ctrl+N" },
-                    { Name: "粘贴(S)", Shortcut: "Ctrl+N" },
-                    { Name: "删除(A)", Shortcut: "Ctrl+N" },
-                    { Name: "使用Bing搜索(U)...", Shortcut: "Ctrl+N" },
-                    { Name: "查找(P)...", Shortcut: "Ctrl+N" },
-                    { Name: "查找下一个(X)", Shortcut: "Ctrl+N" },
-                    { Name: "查找上一个(X)", Shortcut: "Ctrl+N" },
-                    { Name: "替换()", Shortcut: "Ctrl+N" },
-                    { Name: "转到()", Shortcut: "Ctrl+N" },
-                    { Name: "全选()", Shortcut: "Ctrl+N" },
-                    { Name: "时间/日期(D)", Shortcut: "Ctrl+N" },
-                ]
-            }, {
-                ID: 3,
-                MenuItem: "格式(O)",
-                List: [
-                    { Name: "自动换行(W)", Shortcut: "" },
-                    { Name: "字体(F)...", Shortcut: "" }
-                ]
-            }, {
-                ID: 4,
-                MenuItem: "查看(V)",
-                List: [
-                    { Name: "缩放(N)", Shortcut: "Ctrl+N" },
-                    { Name: "状态栏()", Shortcut: "Ctrl+N" }
-                ]
-            }, {
-                ID: 5,
-                MenuItem: "帮助(H)",
-                List: [
-                    { Name: "查看帮助()", Shortcut: "Ctrl+N" },
-                    { Name: "发送反馈()", Shortcut: "Ctrl+N" },
-                    { Name: "关于记事本()", Shortcut: "Ctrl+N" }
-                ]
-            }
-        ]
+        
     }
 
     initPage() {
@@ -68,6 +14,8 @@ class Main {
         const maskElement = document.createElement("div");
         maskElement.classList.add("mask");
         document.body.appendChild(maskElement);
+
+        console.log(data);
 
         const dialog = document.createElement("div");
         dialog.classList.add("dialog-bg");
@@ -79,52 +27,44 @@ class Main {
                 </div>
                 <div class="dialog-container">
                     <div class="line-1">
-                        <div class="ziti">
+                        <div class="ziti line-1-item">
                             <div class="ziti-title">字体(F):</div>
                             <input type="text" class="ziti-input"/>
-                            <ul class="ziti-list dialog-list">
-                                <li class="">微软雅黑</li>
-                                <li class="">隶书</li>
-                                <li class="">楷体</li>
-                                <li class="">新宋体</li>
-                                <li class="">宋体</li>
-                                <li class="">幼圆</li>
-                                <li class="">华文中宋</li>
-                                <li class="">仿宋</li>
-                                <li class="">等线</li>
-                                <li class="">Cascadia</li>
-                            </ul>
+                            <ul class="ziti-list dialog-list"></ul>
                         </div>
-                        <div>
+                        <div class="zixing line-1-item">
                             <div>字形(Y):</div>
                             <input type="text"/>
-                            <ul class="zixing-list dialog-list">
-                                <li class=""></li>
-                            </ul>
+                            <ul class="zixing-list dialog-list"></ul>
                         </div>
-                        <div>
+                        <div class="daxiao line-1-item">
                             <div>大小(S):</div>
                             <input type="text"/>
-                            <ul class="daxiao-list dialog-list">
-                                <li class=""></li>
-                            </ul>
+                            <ul class="daxiao-list dialog-list"></ul>
                         </div>
                     </div>
                     <div class="line-2">
-                        <div>示例</div>
-                        <div>脚本(R)</div>
+                        <div class="shili">
+                            <span>示例</span>
+                            <p>AaBbYyZz</p>
+                        </div>
+                        <div class="jiaoben">
+                            <p>脚本(R)</p>
+                            <select class="script"></select>
+                        </div>
                     </div>
                     <div class="line-3">
-                        <a>显示更多字体</a>
+                        <a href="#">显示更多字体</a>
                     </div>
                     <div class="line-4">
-                        <div class="dialog-confirm">确定</div>
-                        <div class="dialog-cancel">取消</div>
+                        <div class="dialog-confirm dialog-button">确定</div>
+                        <div class="dialog-cancel dialog-button">取消</div>
                     </div>
                 </div>
             </div>
         `;
         document.body.appendChild(dialog);
+        me.renderDialog(data.Dialog);
 
         const element = document.createElement('div');
         element.classList.add("text");
@@ -143,7 +83,7 @@ class Main {
             <div class="footer"></div>
         `;
 
-        element.querySelector(".header").appendChild(me.renderHeader(me.headerData));
+        element.querySelector(".header").appendChild(me.renderHeader(data.Header));
 
         me.maskEvent();
         return element;
@@ -219,9 +159,45 @@ class Main {
         });
     }
 
-    dialog() {
+    renderDialog(dialogData) {
         const me = this;
+        const typefaceElement = document.querySelector(".ziti-list");
+        const glyphElement = document.querySelector(".zixing-list");
+        const sizeElement = document.querySelector(".daxiao-list");
+        const scriptElement = document.querySelector(".script");
         
+        const typefaceData = dialogData.Typeface;
+        const glyphData = dialogData.Glyph;
+        const sizeData = dialogData.Size;
+        const scriptData = dialogData.Script;
+
+        for (let i = 0; i < typefaceData.length; i ++) {
+            const item = typefaceData[i];
+            const tmpElement = document.createElement("li");
+            tmpElement.innerHTML = item.Name;
+            typefaceElement.appendChild(tmpElement);
+        }
+
+        for (let i = 0; i < glyphData.length; i ++) {
+            const item = glyphData[i];
+            const tmpElement = document.createElement("li");
+            tmpElement.innerHTML = item.Name;
+            glyphElement.appendChild(tmpElement);
+        }
+
+        for (let i = 0; i < sizeData.length; i ++) {
+            const item = sizeData[i];
+            const tmpElement = document.createElement("li");
+            tmpElement.innerHTML = item.Name;
+            sizeElement.appendChild(tmpElement);
+        }
+
+        for (let i = 0; i < scriptData.length; i ++) {
+            const item = scriptData[i];
+            const tmpElement = document.createElement("option");
+            tmpElement.innerHTML = item.Name;
+            scriptElement.appendChild(tmpElement);
+        }
     }
 }
 

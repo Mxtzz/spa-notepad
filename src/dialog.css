@@ -16,6 +16,7 @@
     margin: 80px 100px;
     display: flex;
     flex-direction: column;
+    box-shadow: 4px 4px 12px #ccc;
 }
 
 .dialog-header {
@@ -43,14 +44,78 @@
 
 }
 
+.line-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0 15px;
+}
+
+.shili {
+    height: 95px;
+    width: 240px;
+    margin-top: 20px;
+    border: 1px solid rgb(220,220,220);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shili span {
+    position: absolute;
+    top: -10px;
+    left: 4px;
+    background: #eee;
+    padding: 2px;
+}
+
+.jiaoben {
+    width: 240px;
+    margin-top: 10px;
+}
+
+.script {
+    width: 240px;
+    margin-top: 4px;
+}
+
+.line-3 {
+    height: 80px;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 10px;
+}
+
 .dialog-list {
+    height: 112px;
     border: 1px solid rgb(130, 135, 144);
     overflow-y: scroll;
     background: #fff;
 }
 
+.line-1-item {
+    padding: 16px 0px 16px 16px;
+}
+
 .ziti-list {
     
+}
+
+.zixing {
+    width: 130px;
+}
+
+.zixing input {
+    width: 126px;
+}
+
+.daxiao {
+    width: 96px;
+}
+
+.daxiao input {
+    width: 92px;
 }
 
 .dialog-close {
@@ -75,4 +140,22 @@
 .line-4 {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    height: 44px;
+}
+
+.dialog-button {
+    border: 1px solid rgb(173,173,173);
+    padding: 4px 26px;
+    margin-right: 15px;
+    transition: all 200ms ease-in-out;
+}
+
+.dialog-confirm {
+    border: 1px solid rgb(0,120,215);
+}
+
+.dialog-button:hover {
+    border: 1px solid rgb(0,120,215)!important;
+    background: rgb(229,241,251)!important;
 }

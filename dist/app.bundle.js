@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "ce1640b8f0d253c0a66b";
+/******/ 	var hotCurrentHash = "7d7bfdfd2e5c2eda677f";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -795,6 +795,20 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/dialog.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".dialog-bg {\r\n    position: absolute;\r\n    top: 0;\r\n    bottom: 0;\r\n    left: 0;\r\n    right: 0;\r\n    font-size: 12px;\r\n    z-index: 12;\r\n}\r\n\r\n.dialog {\r\n    border: 1px solid;\r\n    width: 450px;\r\n    height: 500px;\r\n    background: #fff;\r\n    margin: 80px 100px;\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.dialog-header {\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n\r\n.dialog-title {\r\n    padding: 6px;\r\n}\r\n\r\n.line-1 {\r\n    display: flex;\r\n}\r\n\r\n.ziti {\r\n\r\n}\r\n\r\n.ziti-title {\r\n\r\n}\r\n\r\n.ziti-input {\r\n\r\n}\r\n\r\n.dialog-list {\r\n    border: 1px solid rgb(130, 135, 144);\r\n    overflow-y: scroll;\r\n    background: #fff;\r\n}\r\n\r\n.ziti-list {\r\n    \r\n}\r\n\r\n.dialog-close {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 28px;\r\n    font-size: 20px;\r\n    transition: all 100ms ease-in-out;\r\n}\r\n\r\n.dialog-close:hover {\r\n    background: rgb(232, 17, 35);\r\n    color: rgb(240, 240, 240);\r\n}\r\n\r\n.dialog-container {\r\n    background: rgb(240,240,240);\r\n    flex: 1;\r\n}\r\n\r\n.line-4 {\r\n    display: flex;\r\n    justify-content: flex-end;\r\n}", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/style.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1186,6 +1200,117 @@ module.exports = function (list, options) {
 
 /***/ }),
 
+/***/ "./src/data.js":
+/***/ (function(module, exports) {
+
+module.exports = {
+    "Dialog": {
+        "Typeface": [
+            {"Name": "微软雅黑"},
+            {"Name": "隶书"},
+            {"Name": "楷体"},
+            {"Name": "新宋体"},
+            {"Name": "宋体"},
+            {"Name": "幼圆"},
+            {"Name": "华文中宋"},
+            {"Name": "仿宋"},
+            {"Name": "等线"}
+        ],
+        "Glyph": [
+            {"Name": "细体"},
+            {"Name": "常规"},
+            {"Name": "粗体"},
+            {"Name": "细体 倾斜"},
+            {"Name": "倾斜"},
+            {"Name": "粗偏斜体"}
+        ],
+        "Size": [
+            {"Name": "8"},
+            {"Name": "9"},
+            {"Name": "10"},
+            {"Name": "11"},
+            {"Name": "12"},
+            {"Name": "14"},
+            {"Name": "16"},
+            {"Name": "18"},
+            {"Name": "20"},
+            {"Name": "22"},
+            {"Name": "24"},
+            {"Name": "26"},
+            {"Name": "28"},
+            {"Name": "30"},
+            {"Name": "32"},
+            {"Name": "36"},
+            {"Name": "48"},
+            {"Name": "72"},
+            {"Name": "初号"},
+            {"Name": "小初"},
+            {"Name": "一号"},
+            {"Name": "小一"},
+            {"Name": "二号"}
+        ],
+        "Script": [
+            {"Name": "中文 GB2312"},
+            {"Name": "西欧语言"},
+            {"Name": "希腊语"},
+            {"Name": "土耳其语"},
+            {"Name": "中欧字符"},
+            {"Name": "西里尔文"}
+        ]
+    }
+}
+
+/***/ }),
+
+/***/ "./src/dialog.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__("./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__("./node_modules/css-loader/dist/cjs.js!./src/dialog.css");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+if (true) {
+  if (!content.locals) {
+    module.hot.accept(
+      "./node_modules/css-loader/dist/cjs.js!./src/dialog.css",
+      function () {
+        var newContent = __webpack_require__("./node_modules/css-loader/dist/cjs.js!./src/dialog.css");
+
+              newContent = newContent.__esModule ? newContent.default : newContent;
+
+              if (typeof newContent === 'string') {
+                newContent = [[module.i, newContent, '']];
+              }
+
+              update(newContent);
+      }
+    )
+  }
+
+  module.hot.dispose(function() { 
+    update();
+  });
+}
+
+module.exports = exported;
+
+/***/ }),
+
 /***/ "./src/dialog.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1206,6 +1331,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dialog_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./src/dialog.js");
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("./src/style.css");
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _dialog_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("./src/dialog.css");
+/* harmony import */ var _dialog_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_dialog_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./src/data.js");
+/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_data__WEBPACK_IMPORTED_MODULE_3__);
+
+
 
 
 
@@ -1271,9 +1402,87 @@ class Main {
 
     initPage() {
         const me = this;
+
         const maskElement = document.createElement("div");
         maskElement.classList.add("mask");
         document.body.appendChild(maskElement);
+
+        console.log(_data__WEBPACK_IMPORTED_MODULE_3__);
+
+        const dialog = document.createElement("div");
+        dialog.classList.add("dialog-bg");
+        dialog.innerHTML = `
+            <div class="dialog">
+                <div class="dialog-header">
+                    <div class="dialog-title">字体</div>
+                    <div class="dialog-close">×</div>
+                </div>
+                <div class="dialog-container">
+                    <div class="line-1">
+                        <div class="ziti">
+                            <div class="ziti-title">字体(F):</div>
+                            <input type="text" class="ziti-input"/>
+                            <ul class="ziti-list dialog-list">
+                                <li class="">微软雅黑</li>
+                                <li class="">隶书</li>
+                                <li class="">楷体</li>
+                                <li class="">新宋体</li>
+                                <li class="">宋体</li>
+                                <li class="">幼圆</li>
+                                <li class="">华文中宋</li>
+                                <li class="">仿宋</li>
+                                <li class="">等线</li>
+                                <li class="">Cascadia</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div>字形(Y):</div>
+                            <input type="text"/>
+                            <ul class="zixing-list dialog-list">
+                                <li class="">微软雅黑</li>
+                                <li class="">隶书</li>
+                                <li class="">楷体</li>
+                                <li class="">新宋体</li>
+                                <li class="">宋体</li>
+                                <li class="">幼圆</li>
+                                <li class="">华文中宋</li>
+                                <li class="">仿宋</li>
+                                <li class="">等线</li>
+                                <li class="">Cascadia</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div>大小(S):</div>
+                            <input type="text"/>
+                            <ul class="daxiao-list dialog-list">
+                                <li class="">微软雅黑</li>
+                                <li class="">隶书</li>
+                                <li class="">楷体</li>
+                                <li class="">新宋体</li>
+                                <li class="">宋体</li>
+                                <li class="">幼圆</li>
+                                <li class="">华文中宋</li>
+                                <li class="">仿宋</li>
+                                <li class="">等线</li>
+                                <li class="">Cascadia</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line-2">
+                        <div>示例</div>
+                        <div>脚本(R)</div>
+                    </div>
+                    <div class="line-3">
+                        <a>显示更多字体</a>
+                    </div>
+                    <div class="line-4">
+                        <div class="dialog-confirm">确定</div>
+                        <div class="dialog-cancel">取消</div>
+                    </div>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(dialog);
 
         const element = document.createElement('div');
         element.classList.add("text");
@@ -1318,6 +1527,13 @@ class Main {
                 const tmpLi = document.createElement("li");
                 tmpLi.classList.add("menu-list-item");
                 tmpLi.innerHTML = `<span>${childListItem.Name}</span><span>${childListItem.Shortcut}</span>`;
+
+                if (i == 2 && j == 1) {
+                    tmpLi.addEventListener("click", () => {
+
+                    });
+                }
+        
                 menuItemContainerHtml.appendChild(tmpLi);
             }
 
@@ -1359,6 +1575,11 @@ class Main {
             me.menuSwitch();
             maskElement.classList.remove("mask-active");
         });
+    }
+
+    dialog() {
+        const me = this;
+        
     }
 }
 
