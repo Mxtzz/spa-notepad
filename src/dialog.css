@@ -49,6 +49,11 @@
 
 }
 
+.list-active {
+    background: rgb(0,120,215);
+    color: #fff;
+}
+
 .line-2 {
     display: flex;
     flex-direction: column;

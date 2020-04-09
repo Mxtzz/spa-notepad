@@ -4,7 +4,11 @@ import * as data from './data';
 
 class Main {
     constructor() {
-        
+        this.fontTypeData = {
+            FontType: "",
+            Glyph: "",
+            Size: ""
+        }
     }
 
     initPage() {
@@ -33,12 +37,12 @@ class Main {
                         </div>
                         <div class="zixing line-1-item">
                             <div>字形(Y):</div>
-                            <input type="text"/>
+                            <input type="text" class="zixing-input"/>
                             <ul class="zixing-list dialog-list"></ul>
                         </div>
                         <div class="daxiao line-1-item">
                             <div>大小(S):</div>
-                            <input type="text"/>
+                            <input type="text" class="daxiao-input"/>
                             <ul class="daxiao-list dialog-list"></ul>
                         </div>
                     </div>
@@ -179,6 +183,15 @@ class Main {
             const item = typefaceData[i];
             const tmpElement = document.createElement("li");
             tmpElement.innerHTML = item.Name;
+            tmpElement.addEventListener("click", (e) => {
+                document.querySelector(".ziti-input").value = item.Name;
+                document.querySelectorAll(".ziti-list .list-active").forEach((activeItem) => {
+                    activeItem.classList.remove("list-active");
+                });
+                e.target.classList.add("list-active");
+                me.fontTypeData.FontType = item.value;
+                me.fontTrigger();
+            });
             typefaceElement.appendChild(tmpElement);
         }
 
@@ -186,6 +199,15 @@ class Main {
             const item = glyphData[i];
             const tmpElement = document.createElement("li");
             tmpElement.innerHTML = item.Name;
+            tmpElement.addEventListener("click", (e) => {
+                document.querySelector(".zixing-input").value = item.Name;
+                document.querySelectorAll(".zixing-list .list-active").forEach((activeItem) => {
+                    activeItem.classList.remove("list-active");
+                });
+                e.target.classList.add("list-active");
+                me.fontTypeData.Glyph = item.value;
+                me.fontTrigger();
+            });
             glyphElement.appendChild(tmpElement);
         }
 
@@ -193,6 +215,15 @@ class Main {
             const item = sizeData[i];
             const tmpElement = document.createElement("li");
             tmpElement.innerHTML = item.Name;
+            tmpElement.addEventListener("click", (e) => {
+                document.querySelector(".daxiao-input").value = item.Name;
+                document.querySelectorAll(".daxiao-list .list-active").forEach((activeItem) => {
+                    activeItem.classList.remove("list-active");
+                });
+                e.target.classList.add("list-active");
+                me.fontTypeData.Size = item.value;
+                me.fontTrigger();
+            });
             sizeElement.appendChild(tmpElement);
         }
 
@@ -214,6 +245,13 @@ class Main {
         document.querySelector(".dialog-close").addEventListener("click", () => {
             document.querySelector(".dialog-bg").classList.remove("dialog-active");
         });
+    }
+
+    fontTrigger() {
+        const me = this;
+        const tmpStyle = `${me.fontTypeData.Glyph} font-size: ${me.fontTypeData.Size}px!important;`;
+        console.log(tmpStyle);
+        document.querySelector(".shili p").style = tmpStyle;
     }
 }
 
