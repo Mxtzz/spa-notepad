@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "00f8ec46a8052d337d4d";
+/******/ 	var hotCurrentHash = "cadaeb3b285d2be3199b";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1579,6 +1579,7 @@ class Main {
             const item = glyphData[i];
             const tmpElement = document.createElement("li");
             tmpElement.innerHTML = item.Name;
+            tmpElement.style = item.value;
             tmpElement.addEventListener("click", (e) => {
                 document.querySelector(".zixing-input").value = item.Name;
                 document.querySelectorAll(".zixing-list .list-active").forEach((activeItem) => {
