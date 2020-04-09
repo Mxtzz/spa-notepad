@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "3117ece9996da5be5c21";
+/******/ 	var hotCurrentHash = "00f8ec46a8052d337d4d";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -802,7 +802,7 @@
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".dialog-bg {\r\n    position: absolute;\r\n    top: 0;\r\n    bottom: 0;\r\n    left: 0;\r\n    right: 0;\r\n    font-size: 12px;\r\n    z-index: 12;\r\n    display: none;\r\n}\r\n\r\n.dialog-active {\r\n    display: block!important;\r\n}\r\n\r\n.dialog {\r\n    border: 1px solid;\r\n    width: 450px;\r\n    height: 500px;\r\n    background: #fff;\r\n    margin: 80px 100px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    box-shadow: 4px 4px 12px #ccc;\r\n}\r\n\r\n.dialog-header {\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n\r\n.dialog-title {\r\n    padding: 6px;\r\n}\r\n\r\n.line-1 {\r\n    display: flex;\r\n}\r\n\r\n.ziti {\r\n\r\n}\r\n\r\n.ziti-title {\r\n\r\n}\r\n\r\n.ziti-input {\r\n\r\n}\r\n\r\n.line-2 {\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: flex-end;\r\n    padding: 0 15px;\r\n}\r\n\r\n.shili {\r\n    height: 95px;\r\n    width: 240px;\r\n    margin-top: 20px;\r\n    border: 1px solid rgb(220,220,220);\r\n    position: relative;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.shili span {\r\n    position: absolute;\r\n    top: -10px;\r\n    left: 4px;\r\n    background: #eee;\r\n    padding: 2px;\r\n}\r\n\r\n.jiaoben {\r\n    width: 240px;\r\n    margin-top: 10px;\r\n}\r\n\r\n.script {\r\n    width: 240px;\r\n    margin-top: 4px;\r\n}\r\n\r\n.line-3 {\r\n    height: 80px;\r\n    display: flex;\r\n    align-items: flex-end;\r\n    padding-left: 10px;\r\n}\r\n\r\n.dialog-list {\r\n    height: 112px;\r\n    border: 1px solid rgb(130, 135, 144);\r\n    overflow-y: scroll;\r\n    background: #fff;\r\n}\r\n\r\n.line-1-item {\r\n    padding: 16px 0px 16px 16px;\r\n}\r\n\r\n.ziti-list {\r\n    \r\n}\r\n\r\n.zixing {\r\n    width: 130px;\r\n}\r\n\r\n.zixing input {\r\n    width: 126px;\r\n}\r\n\r\n.daxiao {\r\n    width: 96px;\r\n}\r\n\r\n.daxiao input {\r\n    width: 92px;\r\n}\r\n\r\n.dialog-close {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 28px;\r\n    font-size: 20px;\r\n    transition: all 100ms ease-in-out;\r\n}\r\n\r\n.dialog-close:hover {\r\n    background: rgb(232, 17, 35);\r\n    color: rgb(240, 240, 240);\r\n}\r\n\r\n.dialog-container {\r\n    background: rgb(240,240,240);\r\n    flex: 1;\r\n}\r\n\r\n.line-4 {\r\n    display: flex;\r\n    justify-content: flex-end;\r\n    align-items: center;\r\n    height: 44px;\r\n}\r\n\r\n.dialog-button {\r\n    border: 1px solid rgb(173,173,173);\r\n    padding: 4px 26px;\r\n    margin-right: 15px;\r\n    transition: all 200ms ease-in-out;\r\n}\r\n\r\n.dialog-confirm {\r\n    border: 1px solid rgb(0,120,215);\r\n}\r\n\r\n.dialog-button:hover {\r\n    border: 1px solid rgb(0,120,215)!important;\r\n    background: rgb(229,241,251)!important;\r\n}", ""]);
+exports.push([module.i, ".dialog-bg {\r\n    position: absolute;\r\n    top: 0;\r\n    bottom: 0;\r\n    left: 0;\r\n    right: 0;\r\n    font-size: 12px;\r\n    z-index: 12;\r\n    display: none;\r\n}\r\n\r\n.dialog-active {\r\n    display: block!important;\r\n}\r\n\r\n.dialog {\r\n    border: 1px solid;\r\n    width: 450px;\r\n    height: 500px;\r\n    background: #fff;\r\n    margin: 80px 100px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    box-shadow: 4px 4px 12px #ccc;\r\n}\r\n\r\n.dialog-header {\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n\r\n.dialog-title {\r\n    padding: 6px;\r\n}\r\n\r\n.line-1 {\r\n    display: flex;\r\n}\r\n\r\n.ziti {\r\n\r\n}\r\n\r\n.ziti-title {\r\n\r\n}\r\n\r\n.ziti-input {\r\n\r\n}\r\n\r\n.list-active {\r\n    background: rgb(0,120,215);\r\n    color: #fff;\r\n}\r\n\r\n.line-2 {\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: flex-end;\r\n    padding: 0 15px;\r\n}\r\n\r\n.shili {\r\n    height: 95px;\r\n    width: 240px;\r\n    margin-top: 20px;\r\n    border: 1px solid rgb(220,220,220);\r\n    position: relative;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.shili span {\r\n    position: absolute;\r\n    top: -10px;\r\n    left: 4px;\r\n    background: #eee;\r\n    padding: 2px;\r\n}\r\n\r\n.jiaoben {\r\n    width: 240px;\r\n    margin-top: 10px;\r\n}\r\n\r\n.script {\r\n    width: 240px;\r\n    margin-top: 4px;\r\n}\r\n\r\n.line-3 {\r\n    height: 80px;\r\n    display: flex;\r\n    align-items: flex-end;\r\n    padding-left: 10px;\r\n}\r\n\r\n.dialog-list {\r\n    height: 112px;\r\n    border: 1px solid rgb(130, 135, 144);\r\n    overflow-y: scroll;\r\n    background: #fff;\r\n}\r\n\r\n.line-1-item {\r\n    padding: 16px 0px 16px 16px;\r\n}\r\n\r\n.ziti-list {\r\n    \r\n}\r\n\r\n.zixing {\r\n    width: 130px;\r\n}\r\n\r\n.zixing input {\r\n    width: 126px;\r\n}\r\n\r\n.daxiao {\r\n    width: 96px;\r\n}\r\n\r\n.daxiao input {\r\n    width: 92px;\r\n}\r\n\r\n.dialog-close {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 28px;\r\n    font-size: 20px;\r\n    transition: all 100ms ease-in-out;\r\n}\r\n\r\n.dialog-close:hover {\r\n    background: rgb(232, 17, 35);\r\n    color: rgb(240, 240, 240);\r\n}\r\n\r\n.dialog-container {\r\n    background: rgb(240,240,240);\r\n    flex: 1;\r\n}\r\n\r\n.line-4 {\r\n    display: flex;\r\n    justify-content: flex-end;\r\n    align-items: center;\r\n    height: 44px;\r\n}\r\n\r\n.dialog-button {\r\n    border: 1px solid rgb(173,173,173);\r\n    padding: 4px 26px;\r\n    margin-right: 15px;\r\n    transition: all 200ms ease-in-out;\r\n}\r\n\r\n.dialog-confirm {\r\n    border: 1px solid rgb(0,120,215);\r\n}\r\n\r\n.dialog-button:hover {\r\n    border: 1px solid rgb(0,120,215)!important;\r\n    background: rgb(229,241,251)!important;\r\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -1217,37 +1217,37 @@ module.exports = {
             {"Name": "等线"}
         ],
         "Glyph": [
-            {"Name": "细体"},
-            {"Name": "常规"},
-            {"Name": "粗体"},
-            {"Name": "细体 倾斜"},
-            {"Name": "倾斜"},
-            {"Name": "粗偏斜体"}
+            {"Name": "细体", value: "font-weight: 100;"},
+            {"Name": "常规", value: "font-weight: 400;"},
+            {"Name": "粗体", value: "font-weight: 600;"},
+            {"Name": "细体 倾斜", value: "font-weight: 100;font-style:italic;"},
+            {"Name": "倾斜", value: "font-weight: 400;font-style:italic;"},
+            {"Name": "粗偏斜体", value: "font-weight: 600;font-style:oblique;"}
         ],
         "Size": [
-            {"Name": "8"},
-            {"Name": "9"},
-            {"Name": "10"},
-            {"Name": "11"},
-            {"Name": "12"},
-            {"Name": "14"},
-            {"Name": "16"},
-            {"Name": "18"},
-            {"Name": "20"},
-            {"Name": "22"},
-            {"Name": "24"},
-            {"Name": "26"},
-            {"Name": "28"},
-            {"Name": "30"},
-            {"Name": "32"},
-            {"Name": "36"},
-            {"Name": "48"},
-            {"Name": "72"},
-            {"Name": "初号"},
-            {"Name": "小初"},
-            {"Name": "一号"},
-            {"Name": "小一"},
-            {"Name": "二号"}
+            {"Name": "8", value: 8},
+            {"Name": "9", value: 9},
+            {"Name": "10", value: 10},
+            {"Name": "11", value: 11},
+            {"Name": "12", value: 12},
+            {"Name": "14", value: 14},
+            {"Name": "16", value: 16},
+            {"Name": "18", value: 18},
+            {"Name": "20", value: 20},
+            {"Name": "22", value: 22},
+            {"Name": "24", value: 24},
+            {"Name": "26", value: 26},
+            {"Name": "28", value: 28},
+            {"Name": "30", value: 30},
+            {"Name": "32", value: 32},
+            {"Name": "36", value: 36},
+            {"Name": "48", value: 48},
+            {"Name": "72", value: 72},
+            {"Name": "初号", value: 40},
+            {"Name": "小初", value: 38},
+            {"Name": "一号", value: 36},
+            {"Name": "小一", value: 32},
+            {"Name": "二号", value: 28}
         ],
         "Script": [
             {"Name": "中文 GB2312"},
@@ -1384,7 +1384,11 @@ __webpack_require__.r(__webpack_exports__);
 
 class Main {
     constructor() {
-        
+        this.fontTypeData = {
+            FontType: "",
+            Glyph: "",
+            Size: ""
+        }
     }
 
     initPage() {
@@ -1413,12 +1417,12 @@ class Main {
                         </div>
                         <div class="zixing line-1-item">
                             <div>字形(Y):</div>
-                            <input type="text"/>
+                            <input type="text" class="zixing-input"/>
                             <ul class="zixing-list dialog-list"></ul>
                         </div>
                         <div class="daxiao line-1-item">
                             <div>大小(S):</div>
-                            <input type="text"/>
+                            <input type="text" class="daxiao-input"/>
                             <ul class="daxiao-list dialog-list"></ul>
                         </div>
                     </div>
@@ -1559,6 +1563,15 @@ class Main {
             const item = typefaceData[i];
             const tmpElement = document.createElement("li");
             tmpElement.innerHTML = item.Name;
+            tmpElement.addEventListener("click", (e) => {
+                document.querySelector(".ziti-input").value = item.Name;
+                document.querySelectorAll(".ziti-list .list-active").forEach((activeItem) => {
+                    activeItem.classList.remove("list-active");
+                });
+                e.target.classList.add("list-active");
+                me.fontTypeData.FontType = item.value;
+                me.fontTrigger();
+            });
             typefaceElement.appendChild(tmpElement);
         }
 
@@ -1566,6 +1579,15 @@ class Main {
             const item = glyphData[i];
             const tmpElement = document.createElement("li");
             tmpElement.innerHTML = item.Name;
+            tmpElement.addEventListener("click", (e) => {
+                document.querySelector(".zixing-input").value = item.Name;
+                document.querySelectorAll(".zixing-list .list-active").forEach((activeItem) => {
+                    activeItem.classList.remove("list-active");
+                });
+                e.target.classList.add("list-active");
+                me.fontTypeData.Glyph = item.value;
+                me.fontTrigger();
+            });
             glyphElement.appendChild(tmpElement);
         }
 
@@ -1573,6 +1595,15 @@ class Main {
             const item = sizeData[i];
             const tmpElement = document.createElement("li");
             tmpElement.innerHTML = item.Name;
+            tmpElement.addEventListener("click", (e) => {
+                document.querySelector(".daxiao-input").value = item.Name;
+                document.querySelectorAll(".daxiao-list .list-active").forEach((activeItem) => {
+                    activeItem.classList.remove("list-active");
+                });
+                e.target.classList.add("list-active");
+                me.fontTypeData.Size = item.value;
+                me.fontTrigger();
+            });
             sizeElement.appendChild(tmpElement);
         }
 
@@ -1594,6 +1625,13 @@ class Main {
         document.querySelector(".dialog-close").addEventListener("click", () => {
             document.querySelector(".dialog-bg").classList.remove("dialog-active");
         });
+    }
+
+    fontTrigger() {
+        const me = this;
+        const tmpStyle = `${me.fontTypeData.Glyph} font-size: ${me.fontTypeData.Size}px!important;`;
+        console.log(tmpStyle);
+        document.querySelector(".shili p").style = tmpStyle;
     }
 }
 
