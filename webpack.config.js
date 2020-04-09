@@ -5,8 +5,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        app: './src/index.js',
-        dialog: './src/dialog.js'
+        app: './src/index.js'
     },
     output: {
         filename: '[name].bundle.js',

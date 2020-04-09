@@ -1,4 +1,3 @@
-import dialog from './dialog.js';
 import './style.css';
 import './dialog.css';
 import * as data from './data';
