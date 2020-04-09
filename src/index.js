@@ -199,6 +199,7 @@ class Main {
             const item = glyphData[i];
             const tmpElement = document.createElement("li");
             tmpElement.innerHTML = item.Name;
+            tmpElement.style = item.value;
             tmpElement.addEventListener("click", (e) => {
                 document.querySelector(".zixing-input").value = item.Name;
                 document.querySelectorAll(".zixing-list .list-active").forEach((activeItem) => {
